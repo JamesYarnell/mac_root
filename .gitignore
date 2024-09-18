@@ -1,0 +1,12 @@
+# Ignore everything
+/*
+
+# Do not ignore the .gitignore file itself
+!.gitignore
+
+# Un-ignore the script directory and its contents
+!/scripts/
+!/scripts/**
+
+# Un-ignore the .zshrc file in the root directory
+!/.zshrc
