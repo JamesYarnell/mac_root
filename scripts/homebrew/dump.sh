@@ -2,7 +2,7 @@
 
 brew update
 
-brew bundle dump --file=~/scripts/homebrew/Brewfile --force
+brew bundle dump --file=/Users/glqzp/scripts/homebrew/Brewfile --force
 
 #restore
 # brew bundle --file=~/scripts/homebrew/Brewfile
