@@ -1,6 +1,9 @@
 #!/bin/bash
 
 brew update
+brew upgrade 
+brew upgrade --cask
+brew cleanup
 
 brew bundle dump --file=/Users/glqzp/scripts/homebrew/Brewfile --force
 
