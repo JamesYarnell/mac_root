@@ -147,27 +147,27 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-# Path to the file storing the last run date
+# Path to the file storing the last run week
 LAST_RUN_FILE="$HOME/.last_dump_run"
 
 # Function to check and prompt to run dump.sh
 check_and_prompt_dump() {
-  local current_date=$(date +%Y-%m-%d)
+  local current_week=$(date +%Y-%U)
   
-  # Check if the last run file exists and read the date
+  # Check if the last run file exists and read the week
   if [[ -f "$LAST_RUN_FILE" ]]; then
-    last_run_date=$(cat "$LAST_RUN_FILE")
+    last_run_week=$(cat "$LAST_RUN_FILE")
   else
-    last_run_date=""
+    last_run_week=""
   fi
 
-  # If the dates differ, prompt the user
-  if [[ "$current_date" != "$last_run_date" ]]; then
+  # If the weeks differ, prompt the user
+  if [[ "$current_week" != "$last_run_week" ]]; then
     echo -n "Do you want to run dump.sh? (y/n): "
     read answer
     if [[ "$answer" == "y" ]]; then
       /Users/glqzp/scripts/homebrew/dump.sh
-      echo "$current_date" > "$LAST_RUN_FILE"
+      echo "$current_week" > "$LAST_RUN_FILE"
     fi
   fi
 }
