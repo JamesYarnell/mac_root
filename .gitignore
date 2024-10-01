@@ -10,3 +10,4 @@
 
 # Un-ignore the .zshrc file in the root directory
 !/.zshrc
+!/.zsh_aliases

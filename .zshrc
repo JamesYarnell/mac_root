@@ -7,21 +7,10 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/jpeg/lib/pkgconfig"
 source $(brew --prefix nvm)/nvm.sh
 # source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias pip='/opt/homebrew/bin/pip3'
-alias zsrc='source ~/.zshrc'
-alias proxy="source ~/scripts/setproxy.sh"
-alias uproxy="source ~/scripts/unsetproxy.sh"
-alias vault-ssh='. ~/scripts/vault-ssh.sh'
-alias s="s -p google "  # https://github.com/zquestz/s
-alias npm_login='npm login --registry=https://artifactory.bayer.com/artifactory/api/npm/npm-platforms-engineering/ --auth-type=web --scope=@monsantoit'
-alias aws_login='source ~/scripts/aws_login.sh'
-alias aws_logon=aws_login
-alias proxy='source ~/scripts/setproxy.sh'
-alias uproxy='source ~/scripts/unsetproxy.sh'
-#alias startdocker='colima start --memory 8' # use me !!!
+# load .zsh_aliases file if it exists
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
+fi
 
 #podman - allows download from docker
 # podman machine init -v ~/git/SSL-TLS-Configuration:/etc/pki/ca-trust/source/anchors/ -v $HOME:$HOME
