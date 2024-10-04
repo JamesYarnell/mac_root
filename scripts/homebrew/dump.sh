@@ -14,7 +14,7 @@ cd ~
 # Check for git changes
 if [[ $(git status --porcelain) ]]; then
   # Add all changes
-  git add .
+  git add -A
 
   # Commit changes
   git commit -m "Auto commit changes"
