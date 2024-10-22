@@ -40,7 +40,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="bullet-train"
 
 parse_git_branch() {
-    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+    git branch --show-current
 }
 BULLETTRAIN_GIT_PROMPT_CMD="\$(parse_git_branch)"
 BULLETTRAIN_GIT_BG=red
