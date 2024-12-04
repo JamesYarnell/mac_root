@@ -4,6 +4,8 @@ export REQUESTS_CA_BUNDLE="/opt/homebrew/etc/openssl@3/cert.pem"
 export AWS_CA_BUNDLE="/opt/homebrew/etc/openssl@3/cert.pem"
 export NODE_EXTRA_CA_CERTS="$HOME/git/SSL-TLS-Configuration/bayer_all.pem"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/jpeg/lib/pkgconfig"
+export AWS_REGION=us-east-1
+
 source $(brew --prefix nvm)/nvm.sh
 # source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
@@ -171,6 +173,8 @@ check_and_prompt_dump() {
     fi
   fi
 }
+
+source ~/git/bayer-proxy-env/bayer-proxy-env.sh
 
 # Call the function to check and prompt
 check_and_prompt_dump

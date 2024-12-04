@@ -10,25 +10,25 @@ fi
 
 logon ()
 {
-        local PROXY_IP="10.185.190.100"
-        local proxy_user=glqzp
+        # local PROXY_IP="10.185.190.100"
+        # local proxy_user=glqzp
         local aws_user=james.yarnell1@bayer.com
 
-        if ping -c 1 -W 1 $PROXY_IP &> /dev/null; then
-                local pwd=""
-                echo -n "Enter Password (identical for both): " 
-                read -s pwd
-                export HTTP_PROXY=http://$proxy_user:$pwd@1$PROXY_IP:8080
-                export HTTPS_PROXY=http://$proxy_user:$pwd@$PROXY_IP:8080
+        # if ping -c 1 -W 1 $PROXY_IP &> /dev/null; then
+        #         local pwd=""
+        #         echo -n "Enter Password (identical for both): " 
+        #         read -s pwd
+        #         export HTTP_PROXY=http://$proxy_user:$pwd@1$PROXY_IP:8080
+        #         export HTTPS_PROXY=http://$proxy_user:$pwd@$PROXY_IP:8080
 
-                echo ""
-                echo "Proxy settings set successfully."
-                echo "Proxy User: $proxy_user"
-        else
-                unset HTTP_PROXY
-                unset HTTPS_PROXY
-                echo "Not on VPN. Unset proxy values"
-        fi
+        #         echo ""
+        #         echo "Proxy settings set successfully."
+        #         echo "Proxy User: $proxy_user"
+        # else
+        #         unset HTTP_PROXY
+        #         unset HTTPS_PROXY
+        #         echo "Not on VPN. Unset proxy values"
+        # fi
         
         echo "AWS User:   $aws_user"
 
