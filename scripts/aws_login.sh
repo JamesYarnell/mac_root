@@ -36,10 +36,17 @@ logon ()
         echo "Now calling aws-sso. Please be patient and do not press any key"
         #aws-sso --profile default --username $aws_user --password $pwd
         #awssso --username $aws_user --rememberMe false 
-        awssso
+        awssso --mode gui
 
         echo "Getting your AWS caller identity..."
         echo "$(aws sts get-caller-identity)"
 }
 
 logon
+
+
+# aws configure sso
+# SSO session name (Recommended): default
+# SSO start URL [None]: https://bayer-prod.awsapps.com/start
+# SSO region [None]: us-east-1
+# SSO registration scopes [sso:account:access]:
